@@ -2,6 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "console_title_template": " {{ .Folder }} :: {{if .Root}}Admin{{end}}",
   "palette": {
+    "os": "#ACB0BE",
+    "blue":  "#89B4FA",
+    "pink": "#c2f5ca",
     "main-bg": "#24283b",
     "terminal-red": "#f7768e",
     "pistachio-green": "#9ece6a",
@@ -24,18 +27,25 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "text",
+          "foreground": "p:os",
           "style": "plain",
-          "background": "transparent",
-          "foreground": "p:terminal-blue",
-          "template": "\u279c "
+          "template": "{{.Icon}} ",
+          "type": "os"          
+        },
+        {
+          "foreground": "p:blue",
+          "style": "plain",
+          "template": "{{ .UserName }}@{{ .HostName }} ",
+          "type": "session"
         },
         {
           "type": "path",
           "style": "plain",
           "foreground": "p:terminal-magenta",
           "properties": {
-            "style": "folder"
+            "folder_icon": "..\ue5fe..",
+            "home_icon": "~",
+            "style": "agnoster_short"
           },
           "template": "<b>{{ .Path }}</b> <p:light-sky-blue>\u26a1</>"
         },
