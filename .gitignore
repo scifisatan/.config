@@ -9,10 +9,9 @@
 !README.md
 !.bashrc
 !/tmux
-!/vivid
 !/ohmyposh
 !/nvim
 !/tmux/*
-!/vivid/*
 !/ohmyposh/*
 !/tmux/*
+!/nvim/*
